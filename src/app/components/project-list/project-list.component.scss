@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  .header-name {
+    white-space: nowrap;
+  }
+}
+
+.row {
+  border-bottom: 1.5px solid rgb(198, 198, 198);
+  padding: 8px 0;
+}

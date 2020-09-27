@@ -1,0 +1,124 @@
+<section class="project-detail">
+  <header>
+    <h1>Project Details</h1>
+  </header>
+  <div class="get-info">
+    <form [formGroup]="projectForm">
+      <table>
+        <tbody>
+
+          <tr>
+            <td>Project Name</td>
+            <td>
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="projectName">
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('projectName').invalid && projectForm.get('projectName').touched">
+                  project name is required.
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Project Owner</td>
+            <td>
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="projectOwner">
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('projectOwner').invalid && projectForm.get('projectOwner').touched">
+                  project owner is required.
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Customer Name</td>
+            <td>
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="customerName" aria-describedby="customerHelp">
+                <small id="customerHelp" class="form-text text-muted">
+                  if you want your ...
+                </small>
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('customerName').invalid && projectForm.get('customerName').touched">
+                  customer name is required.
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Contact Phone</td>
+            <td>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">
+                      <i class="material-icons"> phone </i>
+                    </span>
+                  </div>
+                  <input type="number" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" formControlName="contactPhone" aria-describedby="phoneHelp">
+                </div>
+                <small id="phoneHelp" class="form-text text-muted">
+                  We'll never share your phone with anyone else.
+                </small>
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('contactPhone').invalid && projectForm.get('contactPhone').touched">
+                  contact phone is required.
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Email Address</td>
+            <td>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" style="padding: 0 18px;" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="email" class="form-control" aria-describedby="inputGroupPrepend" formControlName="email">
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('email').invalid && projectForm.get('email').touched">
+                  <p *ngIf="projectForm.get('email').errors && projectForm.get('email').errors['required']"
+                    style="color: rgb(255, 69, 69);">
+                    email address is required.
+                  </p>
+                  <p *ngIf="projectForm.get('email').errors && projectForm.get('email').errors['email']"
+                    style="color: rgb(255, 69, 69);">
+                    email address format is not correct.
+                  </p>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Company Site</td>
+            <td>
+              <div class="input-group">
+                <input type="text" class="form-control" aria-describedby="inputGroupAppend"
+                  formControlName="companySite">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="inputGroupAppend">.com</span>
+                </div>
+                <div class="invalid-feedback"
+                  *ngIf="projectForm.get('companySite').invalid && projectForm.get('companySite').touched">
+                  company site is required.
+                </div>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <div class="stepper-controller">
+    <button style="visibility: hidden;">PREVIOUS</button>
+    <button mat-raised-button color="primary" (click)="onNextStep()">NEXT STEP</button>
+  </div>
+</section>

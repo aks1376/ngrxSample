@@ -1,0 +1,60 @@
+<section class="project-setting">
+  <header>
+    <h1>Project Settings</h1>
+  </header>
+  <div class="get-info">
+    <form [formGroup]="settingForm">
+      <table>
+        <tbody>
+
+          <tr>
+            <td>Email Address</td>
+            <td>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="email" class="form-control" aria-describedby="inputGroupPrepend" formControlName="email">
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Language</td>
+            <td>
+              <select class="form-control" formControlName="language">
+                <option value="eng">English</option>
+                <option value="fa">Farsi</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Time Zone</td>
+            <td>
+              <select class="form-control" formControlName="timezone">
+                <option value="gmt-11:00">GMT 11:00</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Communication</td>
+            <td>
+              <div formGroupName="communication">
+                <mat-checkbox formControlName="email">Email</mat-checkbox>
+                <mat-checkbox formControlName="sms">SMS</mat-checkbox>
+                <mat-checkbox formControlName="phone">Phone</mat-checkbox>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <div class="stepper-controller">
+    <button mat-raised-button (click)="onPreviousStep()">PREVIOUS</button>
+    <button mat-raised-button color="primary" (click)="onNextStep()">NEXT STEP</button>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@Import './assets/fonts/font.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+  margin: 0;
+  color: rgb(52, 52, 52);
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,40 @@
+.stepper {
+  border-bottom: 1px solid rgb(184, 184, 184);
+
+  .header-steppers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    .btn-change-step {
+      border: none;
+      background: inherit;
+      font-size: 4rem;
+      opacity: 0.6;
+      outline: none;
+
+      i {
+        display: block;
+        font-size: 3rem;
+      }
+
+      p {
+        display: block;
+        font-size: 1rem;
+        white-space: nowrap;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .separator {
+      display: inline-block;
+      opacity: 0.6;
+    }
+  }
+
+}
+
+.active-step {
+  color: aqua;
+}

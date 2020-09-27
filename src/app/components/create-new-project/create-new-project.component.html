@@ -1,0 +1,14 @@
+<div class="p-2">
+ <button mat-raised-button color="primary" routerLink="../">Back</button>
+</div>
+<div class="container ">
+  <app-stepper (changeStep)="onChangeStep($event)" [activeStep]="selectedStep"></app-stepper>
+  <div class="stepper-contents" [ngSwitch]="selectedStep">
+    <app-project-details *ngSwitchCase="1" (nextState)="nextStep()"></app-project-details>
+    <app-project-settings *ngSwitchCase="2" (nextStep)="nextStep()" (previousStep)="previousStep()">
+    </app-project-settings>
+    <app-delivery-details *ngSwitchCase="3" (nextStep)="nextStep()" (previousStep)="previousStep()">
+    </app-delivery-details>
+    <app-review-and-submit *ngSwitchCase="4" (previousStep)="previousStep()"></app-review-and-submit>
+  </div>
+</div>

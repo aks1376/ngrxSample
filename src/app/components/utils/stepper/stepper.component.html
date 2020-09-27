@@ -1,0 +1,34 @@
+<div class="stepper">
+  <header class="header-steppers">
+
+    <button class="btn-change-step" (click)="onChangeStep(1)" [ngClass]="{'active-step': activeStep >= 1}">
+      <i class=" material-icons"> library_books </i>
+      <p>Project Details</p>
+    </button>
+    <div class="separator" [ngClass]="{'active-step': activeStep >= 1}">
+      <i class=" material-icons">keyboard_arrow_right</i>
+    </div>
+
+    <button class="btn-change-step" (click)="onChangeStep(2)" [ngClass]="{'active-step': activeStep >= 2}">
+      <i class="material-icons">desktop_windows</i>
+      <p>Project Settings</p>
+    </button>
+    <div class="separator" [ngClass]="{'active-step': activeStep >= 2}">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+
+    <button class="btn-change-step" (click)="onChangeStep(3)" [ngClass]="{'active-step': activeStep >= 3}">
+      <i class="material-icons"> near_me </i>
+      <p>Delivery Details</p>
+    </button>
+    <div class="separator" [ngClass]="{'active-step': activeStep >= 3}">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+
+    <button class="btn-change-step" (click)="onChangeStep(4)" [ngClass]="{'active-step': activeStep >= 4}">
+      <i class="material-icons"> search </i>
+      <p>Review And Submit</p>
+    </button>
+
+  </header>
+</div>

@@ -1,0 +1,38 @@
+<div class="p-2">
+  <button mat-raised-button color="primary" routerLink="add">Add Project</button>
+</div>
+
+<section class="project-list">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-1 header justify-content-center">
+        <mat-checkbox [(ngModel)]="selectAllItem"></mat-checkbox>
+      </div>
+      <div class="col-sm-2 header">
+        <p class="header-name">Company</p>
+      </div>
+      <div class="col-sm-2 header">
+        <p class="header-name">Country</p>
+      </div>
+      <div class="col-sm-2 header">
+        <p class="header-name">Ship Date</p>
+      </div>
+      <div class="col-sm-2 header">
+        <p class="header-name">Assigned</p>
+      </div>
+      <div class="col-sm-1 header">
+        <p class="header-name">Status</p>
+      </div>
+      <div class="col-sm-1 header">
+        <p class="header-name">Type</p>
+      </div>
+      <div class="col-sm-1 header">
+        <p class="header-name">Actions</p>
+      </div>
+    </div>
+    <ng-container *ngFor="let item of items">
+      <app-project-list-item [item]="item" [selectItem]="selectAllItem"></app-project-list-item>
+    </ng-container>
+  </div>
+</section>

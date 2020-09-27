@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-sm-1 item justify-content-center">
+    <mat-checkbox [(ngModel)]="selectItem"></mat-checkbox>
+  </div>
+  <div class="col-sm-2 item">
+    <div class="company-detail">
+      <div class="company-logo">
+        <img [src]="item.companyLogoUrl" alt="company-logo">
+      </div>
+      <div class="company-info">
+        <p>{{item.companyName}}</p>
+        <p class="light-text">{{item.companyTechnology}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2 item">
+    <div class="country">
+      <p class="light-text">{{item.country}}</p>
+    </div>
+  </div>
+  <div class="col-sm-2 item">
+    <div class="ship-date">
+      <p class="light-text">{{item.shipDate}}</p>
+    </div>
+  </div>
+  <div class="col-sm-2 item">
+    <div class="assigned">
+      <div class="user-avatar">
+        <img [src]="item.assigned.userAvatarUrl" [alt]="item.assigned.userName">
+      </div>
+      <div class="user-info">
+        <p>{{item.assigned.userName}}</p>
+        <p class="light-text">{{item.assigned.userPosition}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-1 item">
+    <div class="status" [ngSwitch]="item.status">
+      <p class="success" *ngSwitchCase="1">Success</p>
+      <p class="done" *ngSwitchCase="2">Done</p>
+      <p class="pending" *ngSwitchCase="3">Pending</p>
+      <p class="processing" *ngSwitchCase="4">Processing</p>
+      <p class="Canceled" *ngSwitchCase="5">Canceled</p>
+    </div>
+  </div>
+
+  <div class="col-sm-1 item">
+    <div class="type" [ngSwitch]="item.type">
+      <p class="staff" *ngSwitchCase="1">Staff</p>
+      <p class="customer" *ngSwitchCase="2">Customer</p>
+      <p class="company" *ngSwitchCase="3">Company</p>
+    </div>
+  </div>
+
+  <div class="col-sm-1 item">
+    <div class="actions">
+      <button mat-button [matMenuTriggerFor]="menu">...</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>action 1</button>
+        <button mat-menu-item>action 2</button>
+      </mat-menu>
+    </div>
+  </div>
+
+</div>

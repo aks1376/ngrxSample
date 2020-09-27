@@ -1,0 +1,120 @@
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  border-bottom: 1.5px solid rgb(198, 198, 198);
+  padding: 8px 0;
+}
+
+.company-detail {
+  display: flex;
+  align-items: center;
+
+  .company-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .company-info {
+    display: inline-block;
+    margin-left: 0.7rem;
+  }
+}
+
+.assigned {
+  display: flex;
+  align-items: center;
+
+  .user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .user-info {
+    display: inline-block;
+    margin-left: 0.7rem;
+  }
+}
+
+.light-text {
+  color: rgb(155, 155, 155);
+  font-size: 0.8rem;
+}
+
+.status {
+  .success {
+    color: #00b400;
+    background-color: rgb(217, 250, 217);
+  }
+
+  .done {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+  .pending {
+    color: rgb(60, 60, 255);
+    background-color: rgba(6, 6, 255, 0.1);
+  }
+
+  .processing {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+  .canceled {
+    color: orange;
+    background-color: rgba(255, 166, 0, 0.1);
+  }
+
+  p {
+    padding: .2rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+.type {
+  .staff {
+    color: rgb(6, 219, 6);
+  }
+
+  .customer {
+    color: rgb(47, 47, 255);
+  }
+
+  .company {
+    color: rgb(255, 50, 50);
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      /* Insert content that looks like bullets */
+      content: "•";
+      margin-right: 2px;
+      font-size: 1.5rem;
+    }
+  }
+}

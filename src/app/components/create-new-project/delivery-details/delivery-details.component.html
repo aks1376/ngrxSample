@@ -1,0 +1,56 @@
+<section>
+  <header>
+    <h1>Setup Your Address</h1>
+  </header>
+  <div class="get-info">
+    <form [formGroup]="deliveryForm">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-12">
+            <label>Address Line 1</label>
+            <input type="text" class="form-control" formControlName="firstAddress">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <label>Address Line 2</label>
+            <input type="text" class="form-control" formControlName="secondAddress">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>Postcode</label>
+            <input type="number" class="form-control" formControlName="postcode">
+          </div>
+          <div class="col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" formControlName="city">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label>State</label>
+            <select class="form-control" formControlName="state">
+              <option value="NY">ny</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label>Country</label>
+            <select class="form-control" formControlName="country">
+              <option value="AU">Australia</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="stepper-controller">
+    <button mat-raised-button (click)="onPreviousStep()">PREVIOUS</button>
+    <button mat-raised-button color="primary" (click)="onNextStep()">NEXT STEP</button>
+  </div>
+</section>

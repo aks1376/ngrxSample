@@ -1,0 +1,53 @@
+section {
+  header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  table {
+    width: 100%;
+
+    tbody {
+      tr {
+        td {
+          padding: 0.7rem 0;
+
+          &:nth-child(1) {
+            width: 30%;
+          }
+
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stepper-controller {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  margin-top: 1rem;
+  border-top: 1px solid #c2c2c2;
+
+  button {
+    text-transform: uppercase;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border-color: rgb(255, 69, 69);
+}
+
+.invalid-feedback {
+  display: block;
+}

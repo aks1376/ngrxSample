@@ -1,0 +1,17 @@
+@import './../styles/commonStyle';
+
+.row {
+  .col-12 {
+    padding: 0;
+  }
+
+  .col-md-6 {
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+
+    &:nth-child(2) {
+      padding-right: 0;
+    }
+  }
+}

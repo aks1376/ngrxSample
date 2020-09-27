@@ -1,0 +1,49 @@
+<section class="review">
+  <header class="reivew-header">
+    <h1>Review Your Details And Submit</h1>
+  </header>
+
+  <section class="project-detail">
+    <header class="headline">
+      <h2>Project Details</h2>
+    </header>
+    <div class="info">
+      <p> {{projectDetail.customerName}} </p>
+      <p> Phone: {{projectDetail.contactPhone}} </p>
+      <p> Email: {{projectDetail.email}}</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="delivery-address">
+    <header class="headline">
+      <h2>Delivery Address</h2>
+    </header>
+    <div class="info">
+      <p>{{deliveryDetail.firstAddress}}</p>
+      <p>{{deliveryDetail.secondAddress}}</p>
+      <p>{{deliveryDetail.city + ' ' + deliveryDetail.country + ' ' + deliveryDetail.state}}</p>
+    </div>
+    <div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="payment-detail">
+    <header class="headline">
+      <h2>Payment Details</h2>
+    </header>
+    <div class="info">
+      <p>Card Number: {{'xxxx xxxx xxxx 1111'}}</p>
+      <p>Card Name: {{'john'}}</p>
+      <p>Card Expiry: {{'john'}}</p>
+    </div>
+  </section>
+  <div class="stepper-controller">
+    <button mat-raised-button (click)="onPreviousStep()">PREVIOUS</button>
+    <button mat-raised-button class="btn-submit" (click)="onSubmit()">SUBMIT</button>
+  </div>
+</section>
